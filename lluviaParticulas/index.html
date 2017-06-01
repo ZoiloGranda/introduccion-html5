@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Lluvia de Particulas</title>
+	<style>
+	body{
+		background-color: black;
+	}
+	</style>
+</head>
+<body>
+<canvas id="miCanvas"></canvas>
+<script src="snowflakes.js"></script>
+<script>
+	var canvas= document.getElementById('miCanvas');
+	//availwidth y height retornan el ancho y alto disponible de la pantalla del usuario
+	canvas.width=window.screen.availWidth;
+	canvas.height=window.screen.availHeight;
+	var imagen= new Image();
+	imagen.onload=function(){
+		//rain es del script de snowflakes.js
+		//se le pasa dos parametros el id del canvas y la imagen, en este caso es this porque se esta llamando al objeto rain
+		//desde el metodo onloda de la imagen
+		var rain = new Rain('miCanvas',this);
+		rain.let_it_snow();
+
+	}
+	imagen.src='snowflake.png'
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Recorta Imagenes</title>
+</head>
+<body>
+<div id="main">
+	<h1>Recortar imagenes con html5</h1>
+	<div id="imagen">
+		<div id="miCanvas"></div>
+	</div>
+	<img crossOrigin="" src="../public/img.jpg" id="miImg">
+	<div id="botones">
+		<button id="ctImg">Cortar imagen</button>
+		<button id="ctFin">Terminar recorte</button>
+	</div>
+</div>
+<canvas id="canvasFinal"></canvas>
+<script type="text/javascript" src="../public/kinetic-v3.9.8.js"></script>
+<script src="https://code.jquery.com/jquery-1.7.1.min.js" integrity="sha256-iBcUE/x23aI6syuqF7EeT/+JFBxjPs5zeFJEXxumwb0="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="../public/tutojs.js"></script>
+<script> 
+  $(document).on('ready', function(){
+	  $('#ctImg').on('click',function(){
+	    clsCut.letsCut('ctImg', 'ctFin', 'miImg', 'miCanvas'); 
+	  })
+  })
+  </script>
+</body>
+</html>

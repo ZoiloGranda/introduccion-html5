@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		header{
+			background-color: #333;
+			color: #FFFFFF;
+		}
+		canvas{
+			border: 1px solid black;
+			display: block;
+		}
+		h2{
+			border-top: 1px solid gray;
+		}
+	</style>
+</head>
+<body>
+<h2>Header y Nav</h2>
+	<header>Encabezado HTML5</header>
+	<nav>
+		<ul>
+			<li>Inicio</li>
+			<li>Contacto</li>
+		</ul>
+	</nav>
+	<h2>Section, Article y Aside</h2>
+	<section>
+		<article>
+			contenido principal de la pagina
+		</article>
+		<aside> Un texto adicional</aside>
+	</section>
+	<h2>Canvas</h2>
+	<canvas id="micanvas" width="600" height="300px">Tu navegador no soporta canvas</canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById('micanvas');
+		var ctx = canvas.getContext('2d');
+		ctx.fillRect(0,0,20,20);
+	</script>
+  <h2>Audio</h2>
+	<audio controls="controls" loop="loop">
+		<source src="http://k007.kiwi6.com/hotlink/yu213tnl87/oddioblender_-_8bit_sex_you_up.mp3" type="audio/mp3"/>
+		Tu navegador no es compatible con el reproductor de html5
+	</audio>
+	<h2>Datalist</h2>
+	<input list="canales"/>
+	<datalist id="canales">
+		<option value="CodigoFacilito"></option>
+		<option value="Udemy"></option>
+		<option value="Coursera"></option>
+		<option value="Codecademy"></option>
+	</datalist>
+	<h2>Details</h2>
+	<details>
+		<summary>CodigoFacilito</summary>
+		Canal dedicado a los cursos de programacion
+	</details>
+	<h2>Figure</h2>
+	<p>Texto arriba de la imagen de prueba<figure>
+		<img src="/home/zoilo/Escritorio/descarga.png">
+		<!--<figcaption> es para colocar una imagen, diagrama, grafico o algo asi, es un elemento autocontenido
+		que no modifica el flujo de la pagina</figcaption>-->
+		<figcaption> Esta es una imagen de prueba</figcaption>
+	</figure>Texto abajo de la imagen de prueba</p>
+	<p>Probando la etiqueta <mark>Mark</mark> de html5</p>
+	<h2>Meter</h2>
+	<p>Temperatura</p>
+	<!--value=valor que va a tener
+	    max=valor maximo, 
+	    min=valor minimo, menos de aqui cambia el color de la barra
+	    high=valor que se considera alto, mas de aqui cambia de color la barra
+	    low=valor que se considera alto, mas de aqui cambia de color la barra
+	    optimum=valor optimo-->
+	<meter value="20" max="100" min="-20" high="35" low="10" optimum="20">Tu navegador no es compatible con meter de html5</meter>
+	<meter value="37" max="100" min="-20" high="35" low="10" optimum="20">Tu navegador no es compatible con meter de html5</meter>
+	<meter value="80" max="100" min="-20" high="35" low="10" optimum="20">Tu navegador no es compatible con meter de html5</meter>
+	<meter value="0.6">Tu navegador no es compatible con meter de html5</meter>
+	<h2>Output</h2>
+	<!--cuando hay un input del usuario se actualiza el valor de la variable resultado, sumando los valores de x y y-->
+<form oninput="resultado.value=parseInt(x.value)+parseInt(y.value)">
+	<input type="number" name="x" value="0">
+	<input type="number" name="y" value="0">
+	<!--ouput muestra informacion en pantalla, aqui muestra la variable resultado que se crea en el oninput -->
+	<output name="resultado" for="x y"></output>
+</form>
+<h2>Progress</h2>
+<progress value="85" max="100">Tu navegador no soporta progress de html5</progress>
+<progress value="15" max="100">Tu navegador no soporta progress de html5</progress>
+<h2>Time</h2>
+<!--sirve para el SEO, pasar horas o fechas especificas al front end o back end, colocar fecha de publicacion-->
+<p>La hora es <time>10:00</time></p>
+<time datetime="2016-02-12" pubdate></time>
+<h2>Video</h2>
+<!--cuando se usa el atributo autoplay, no reconoce el atributo preload
+poster: la imagen que aparece cuando el video no se ha cargado
+muted: el video comienza en silencio-->
+<video width="550" height="400" controls="controls" loop="loop" preload="none" muted="muted" poster="/home/zoilo/Escritorio/descarga.png">
+	<source src="/home/zoilo/Descargas/Chappie.2015.1080p.BluRay.x264.YIFY.mp4" type="video/mp4">
+	Tu navegador no soporta video de html5
+</video>
+<h2>Draggable, contenteditable, hidden y spellcheck</h2>
+<p draggable="true">Parrafo draggable (arrastable)</p>
+<p contenteditable="true" spellcheck="true">Parrafo de contenido editable y con spellcheck</p>
+<p hidden>Este parrafo esta en hidden</p>
+<p>Arriba de de este parrafo hay un parrafo con hidden</p>
+</body>
+</html>
